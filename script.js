@@ -39,14 +39,10 @@ function verifyWordList () {
     wordsList = predifinedWords;
     concatWordsList = false;
     console.log(wordsList);
-    
-
-    for (let index = 0; index < localStorage.length; index++) {
         
-        if (localStorage.key(index) === 'words') {
+        if (localStorage.words === null) {
             concatWordsList = true;
             console.log(concatWordsList);
-            break;
         }
 
         else{
@@ -62,7 +58,6 @@ function verifyWordList () {
                
         }
         
-    }
 
     if (concatWordsList === true) {
             localStorageWordsList = localStorage.words;
