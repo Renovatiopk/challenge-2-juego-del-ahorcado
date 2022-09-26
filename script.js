@@ -40,7 +40,7 @@ function verifyWordList () {
     concatWordsList = false;
     console.log(wordsList);
         
-        if (localStorage.words === null) {
+        if (localStorage.getItem('words') != null) {
             concatWordsList = true;
             console.log(concatWordsList);
         }
@@ -58,7 +58,6 @@ function verifyWordList () {
                
         }
         
-
     if (concatWordsList === true) {
             localStorageWordsList = localStorage.words;
             console.log(localStorageWordsList);
